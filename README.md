@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # About
 
 因为前端项目是根据饿了么官网接口写的，所以后台系统也保持了和官网一致的API接口。
@@ -256,3 +257,6 @@ npm run dev
 [GPL](https://github.com/bailicangdu/node-elm/blob/master/COPYING)
 
 
+=======
+# elm
+>>>>>>> e46577961182003afcd87491cdc677dd37045161

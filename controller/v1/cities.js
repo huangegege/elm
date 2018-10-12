@@ -76,8 +76,8 @@ class CityHandle extends AddressComponent{
 		/*
 		汉字转换成拼音
 		 */
-        const pinyinArr = pinyin(cityInfo.city, {
-		  	style: pinyin.STYLE_NORMAL,
+		const pinyinArr = pinyin(cityInfo.city, {
+			style: pinyin.STYLE_NORMAL,
 		});
 		let cityName = '';
 		pinyinArr.forEach(item => {

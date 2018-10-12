@@ -181,20 +181,19 @@ export default class BaseComponent {
 	}
 	uptoken(bucket, key){
 		var putPolicy = new qiniu.rs.PutPolicy(bucket+":"+key);
-  		return putPolicy.token();
+  	return putPolicy.token();
 	}
 	uploadFile(uptoken, key, localFile){
 		return new Promise((resolve, reject) => {
 			var extra = new qiniu.io.PutExtra();
-		    qiniu.io.putFile(uptoken, key, localFile, extra, function(err, ret) {
-			    if(!err) {  
-			    	resolve(ret.key)
-			    } else {
-			    	console.log('图片上传至七牛失败', err);
-			    	reject(err)
-			    }
-		  	});
-
+			qiniu.io.putFile(uptoken, key, localFile, extra, function(err, ret) {
+				if(!err) {  
+					resolve(ret.key)
+				} else {
+					console.log('图片上传至七牛失败', err);
+					reject(err)
+				}
+			});
 		})
 	}	
 }
